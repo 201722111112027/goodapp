@@ -19,7 +19,7 @@
       </tabbar-item>
       <tabbar-item selected link="/component/demo">
         <img slot="icon" src="../assets/map.png">
-        <span slot="label">附近</span>
+        <span slot="label">周边</span>
       </tabbar-item>
       <tabbar-item badge="2">
         <img slot="icon" src="../assets/mine.png">
