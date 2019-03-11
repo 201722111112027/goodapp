@@ -26,17 +26,9 @@
         <span slot="label">我的</span>
       </tabbar-item>
     </tabbar>
-    <!-- <group title="禁用内置验证及显示成功或者错误样式">
-      <x-input title="禁用验证" placeholder="I'm placeholder" novalidate :icon-type="iconType" :show-clear="false" @on-blur="onBlur" placeholder-align="right"></x-input>
-    </group> -->
-    <!-- <div style="padding:15px;">
-      <x-button @click.native="iconType = 'success'" type="primary"> set success</x-button>
-      <x-button @click.native="iconType = 'error'" type="primary"> set error</x-button>
-      <x-button @click.native="iconType = ''" type="primary"> set empty</x-button>
-    </div> -->
-     
-      <x-input title="手机号码格式化" mask="999 9999 9999" v-model="maskValue" :max="13" is-type="china-mobile"></x-input>
-      
+    <x-input title="手机号" mask="999 9999 9999"  :max="13" is-type="china-mobile"></x-input>
+    <x-input title="密码"  :max="13" type="password" >type="password"</x-input>
+    <x-button type="primary" action-type="button">登录</x-button>
   </div>
 </template>
 
