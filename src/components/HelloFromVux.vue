@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <x-header :right-options="{showMore: true}" :left-options="{showBack: false}">我爱读书</x-header>
+    <x-header :right-options="{showMore: true}" @on-click-more="Login" :left-options="{showBack: false}">我爱读书</x-header>
     <swiper loop auto :list="img_list" :index="img_index"></swiper>
     <grid :cols="4" :show-lr-borders="false">
       <grid-item :label="('Grid')" v-for="i in 8" :key="i">
@@ -26,14 +26,12 @@
         <span slot="label">我的</span>
       </tabbar-item>
     </tabbar>
-    <x-input title="手机号" mask="999 9999 9999"  :max="13" is-type="china-mobile"></x-input>
-    <x-input title="密码"  :max="13" type="password" >type="password"</x-input>
-    <x-button type="primary" action-type="button">登录</x-button>
+    
   </div>
 </template>
 
 <script>
-import { Tabbar, TabbarItem, Group, Cell, XHeader, Grid, GridItem, Swiper, Panel, XInput,XButton } from 'vux'
+import { Tabbar, TabbarItem, Group, Cell, XHeader, Grid, GridItem, Swiper, Panel } from 'vux'
 
 const baseList = [{
   url: 'javascript:',
@@ -59,8 +57,6 @@ const urlList = baseList.map((item, index) => ({
 
 export default {
   components: {
-    XButton,
-    XInput,
     Panel,
     XHeader,
     Tabbar,
@@ -70,6 +66,11 @@ export default {
     Grid,
     GridItem,
     Swiper
+  },
+  methods: {
+    Login () {
+      this.$router.push('/Login')
+    }
   },
   data () {
     return {
