@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <x-header :right-options="{showMore: true}" @on-click-more="Login" :left-options="{showBack: false}">我爱读书</x-header>
+    <x-header style="background-color:#1D62F0 " :right-options="{showMore: true}" @on-click-more="Login" :left-options="{showBack: false}">我爱读书</x-header>
     <swiper loop auto :list="img_list" :index="img_index"></swiper>
     <grid :cols="4" :show-lr-borders="false">
       <grid-item :label="('Grid')" v-for="i in 8" :key="i">
@@ -17,7 +17,7 @@
         <img slot="icon" src="../assets/book.png">
         <span slot="label">书籍</span>
       </tabbar-item>
-      <tabbar-item selected link="/component/demo">
+      <tabbar-item selected link="/now">
         <img slot="icon" src="../assets/map.png">
         <span slot="label">周边</span>
       </tabbar-item>

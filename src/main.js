@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import App from './App'
 import Home from './components/HelloFromVux'
 import Login from './components/Login'
+import now from './components/now'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,10 @@ const routes = [{
 {
   path: '/Login',
   component: Login
+},
+{
+  path: '/now',
+  component: now
 }]
 
 const router = new VueRouter({

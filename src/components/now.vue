@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <x-header :right-options="{showMore: False}"  :left-options="{showBack: ture}">Login</x-header>
-  <x-input style="background-color:#1D62F0 " title="手机号" mask="999 9999 9999"  :max="13" is-type="phone" v-model="phone"></x-input>
+  <x-input title="手机号" mask="999 9999 9999"  :max="13" is-type="phone" v-model="phone"></x-input>
   <x-input title="密  码"  :max="13" type="password" v-model="password" ></x-input>
   <box gap="10px 10px">
   <x-button :gradients="['#1D62F0','#19D5FD']" @click.native="Login">登录</x-button>
