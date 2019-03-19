@@ -76,14 +76,14 @@ export default {
     let _this = this
     this.$http.post('https://api.apiopen.top/getJoke').then(({data}) => {
       console.log(data)
-      var new_data = data.result.map((item, index) => ({
+      var newData = data.result.map((item, index) => ({
         src: item.header,
         fallbackSrc: item.header,
         title: item.name,
         desc: item.text
       }))
-      console.log(new_data)
-      _this.list = new_data
+      console.log(newData)
+      _this.list = newData
     })
   },
   data () {
